@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>field · receiver · wave</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="layout">
+    <section class="panel panel-left">
+      <header class="panel-header">
+        <h1>field</h1>
+      </header>
+
+      <form id="field-form" class="field-form">
+        <div class="form-row">
+          <label for="phase">phase</label>
+          <select id="phase" name="phase">
+            <option value="rut">rut</option>
+            <option value="emerging" selected>emerging</option>
+            <option value="growing">growing</option>
+            <option value="taste">taste</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="energy">energy <span id="energy-value">0.50</span></label>
+          <input
+            id="energy"
+            name="energy"
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.5">
+        </div>
+
+        <div class="form-row">
+          <label for="plasticity">plasticity <span id="plasticity-value">0.50</span></label>
+          <input
+            id="plasticity"
+            name="plasticity"
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.5">
+        </div>
+
+        <div class="form-row buttons">
+          <button type="button" id="start-btn">start</button>
+          <button type="button" id="stop-btn">stop</button>
+        </div>
+      </form>
+
+      <section class="debug">
+        <h2>preset</h2>
+        <pre id="preset-output"></pre>
+      </section>
+    </section>
+
+    <section class="panel panel-right">
+      <header class="panel-header">
+        <h1>receiver <span>x</span> wave</h1>
+      </header>
+      <canvas id="visualizer"></canvas>
+    </section>
+  </main>
+  <script type="module" src="./bundle.mjs"></script>
+</body>
+</html>

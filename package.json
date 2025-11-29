@@ -1,0 +1,22 @@
+{
+  "name": "field",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-ESxARG/field.git"
+  },
+  "license": "AGPL-3.0-or-later",
+  "author": "operatorjen",
+  "type": "module",
+  "dependencies": {
+    "receiver": "github:A-ESxARG/receiver"
+  },
+  "main": "index.mjs",
+  "scripts": {
+    "build": "node demo/build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.1"
+  }
+}
